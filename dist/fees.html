@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration</title>
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<div class="navbar">
+
+  <a href="index.html">Home</a>
+  <a href="login.html">Login</a>
+  <a href="reg.html">Registration</a>
+  <a href="fees.html">Fees Payement</a>
+  <a href="stud_detail.html">Student Detail</a>
+  <a href="About.html">About</a>
+  <a href="contact.html">Contact</a><br><br><br>
+<form name="RegForm" onsubmit="return validate()">		
+<div id="login-box" onsubmit="return validate()">
+	<div class="left-box">
+		<h1>FEE's Payments</h1>
+			<input type="text" name="name1" placeholder="First Name"/>
+			<input type="text" name="name2" placeholder="Last Name"/>
+			<input type="text" name="username" placeholder="Username"/>
+			<input type="text" name="email" placeholder="Email"/>
+			<input type="password" name="password" placeholder="Password"/>
+			<input type="password" name="password2" placeholder="Retype-Password"/>
+			<input type="number" name="fee" placeholder="Enter ammount"/>
+			<input type="bank name" name="BANK" placeholder="BANK NAME"/>
+			<input type="number" name="ac" placeholder="A/C number"/>
+			<input type="submit" name="signup-button" value="Pay Fee's"/>
+	</div>
+</form>	
+</div>
+<script>
+function validate()
+{
+var name=document.forms["RegForm"]["username"];
+var email=document.forms["RegForm"]["email"];
+var pass=document.forms["RegForm"]["password"];
+if(name.value == "")
+{
+window.alert("Please enter your name.");
+name.focus();
+return false;
+}
+if(email.value == "")
+{
+window.alert("Please enter your E-mail.");
+email.focus();
+return false;
+}
+if(pass.value == "")
+{
+window.alert("Please enter your password.");
+pass.focus();
+return false;
+}
+return true;
+}
+</script>
+</body>
+</html>

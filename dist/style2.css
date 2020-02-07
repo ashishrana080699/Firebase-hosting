@@ -1,0 +1,89 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+	margin:0;
+	padding:0;
+	background:url(NEET-application_form.jpg);
+	background-size: 100%;
+}
+
+#regForm {
+  background-color: white;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 30px;
+  width: 70%;
+  min-width: 200px;
+}
+
+h1 {
+  text-align: center;
+}
+  .navbar 
+{
+	overflow: hidden; 
+	position: relative;
+	width: 100%;
+}
+
+.navbar a 
+{
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 16px;
+	text-decoration: none;
+	font-size: 20px;
+ 
+}
+
+.navbar a:hover 
+{
+	color: white;
+}
+input[type="submit"]
+{
+	margin-bottom:28px;
+	width:120px;
+	height:32px;
+	background:#f44336;
+	border:naone;
+	border-radius:2px;
+	color:#fff;
+	font-family:sans-serif;
+	font-weight:500;
+	text-transform:uppercase;
+	transition:0.2s ease;
+	cursor: pointer;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus
+{
+	background:black;
+	transition:0.2s ease;
+}
+input[type="reset"]
+{
+	margin-bottom:28px;
+	width:120px;
+	height:32px;
+	background:#f44336;
+	border:naone;
+	border-radius:2px;
+	color:#fff;
+	font-family:sans-serif;
+	font-weight:500;
+	text-transform:uppercase;
+	transition:0.2s ease;
+	cursor: pointer;
+}
+input[type="reset"]:hover,
+input[type="reset"]:focus
+{
+	background:black;
+	transition:0.2s ease;
+}

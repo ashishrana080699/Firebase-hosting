@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<head>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+</head>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: green;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+#x{
+padding:30px;
+color:white;
+
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding:2px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+   padding:2px;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+   padding:2px;
+}
+
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+   padding:2px;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+   padding:2px;
+}
+#para{
+background-color:grey;
+font-size:22px;
+padding:10px;
+color:white;
+}
+</style>
+<body><pre>
+<center><img src="download.jpg" width=290 height=160  >
+</pre>
+</center>
+<h2 style="text-align:center"></h2>
+<a href ="index.html"><button class="button">Home</button></a>
+<a href="login.html"><button class="button">Login</button></a>
+<a href="reg.html"><button class="button">Registration</button></a>
+<a href="stud_detail.html"><button class="button">Student Details</button></a>
+<a href="fees.html"><button class="button">Fees Payment</button></a>
+<a href="About.html"><button class="button">About</button></a>
+<a href="contact.html"><button class="button">contact</button></a>
+
+<div class="w3-content w3-section" style="max-width:100%">
+  <img class="mySlides w3-animate-fading" src="graduates.jpg" style="width:100%;height:600px">
+  <img class="mySlides w3-animate-fading" src="IIT-Delhi-Pic.jpg" style="width:100%;height:600px">
+  <img class="mySlides w3-animate-fading" src="14352969248.jpg" style="width:100%;height:600px">
+  <img class="mySlides w3-animate-fading" src="2%20(1).jpg" style="width:100%;height:600px">
+  <img class="mySlides w3-animate-fading" src="25948_IITK_New.jpg" style="width:100%;height:600px">
+  <img class="mySlides w3-animate-fading" src="Harvard.jpg" style="width:100%;height:600px">
+  <img class="mySlides w3-animate-fading" src="JB-INSTITUTE-OF-TECHNOLOGY-DEHRADUN.jpg" style="width:100%;height:600px">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 7000);    
+}
+</script>
+<p id="para">
+The goal of 'Online Admission System' is to automate the Academic Institute’s admission structure and its related operation and functionality. 
+The objective of the initiative is to provide support to the administration and admission seeking candidates by providing a faster, transparent and 
+easy way of keeping records and use them for reference and further proceedings.</p>
+<body bgcolor="white  ">
+<table cellspacing="10px" >
+<tr>
+<td>
+<div class="container">
+  <img src="sheridan.jpg" alt="Notebook" style="width:670px;" height=320px>
+  <div class="content">
+    <h1>Forging Pathways of Excellence</h1>
+    <p>For nearly 50 years, our campus has served as a crossroads where people venture to be educated and then follow their own paths to serve a world in need of thoughtful, principled, and effective leaders.
+	</p>
+  </div>
+</div>
+</td>
+<td><div class="container">
+  <img src="large-group-of-students-taking-test-id182059956-180302.jpg" alt="Notebook" style="width:670px;"height=320px>
+  <div class="content">
+    <h3>Admissions done on merit basis only.
+	</h3>
+  </div>
+</div>
+</td>
+</tr>
+</table><pre>
+</pre>
+<table width="1325px"  bgcolor=	grey cellspacing="10px" id="x" align=center>
+<tr>
+<td width=33% align=center>
+<img src="black-wheat-and-mortarboard%20-%20Copy%20(2).png" width=150 height=90>
+</td>
+
+<td width=33% ><br>
+Aurangabad -431004<br>
+MAHARASHTRA-(INDIA)<br>
+Ph. +91-0240-2403399, 2400431<br>
+Email :<br>
+registrar(at)bamu(dot)ac(dot)in
+</td>
+<td >
+<h3>Connect with us</h3>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+</td>
+</tr>
+</table>
+<pre>
+</pre>																																						
+</body>
+</html>
+
+
